@@ -14,7 +14,26 @@ namespace TicketSystem21
         {
             logger.Info("Program started");
 
-            Console.WriteLine("Hello World!");
+            string choice = "";
+
+            do
+            {
+                Console.WriteLine("1) Add Ticket");
+                Console.WriteLine("2) Display All Tickets");
+                Console.WriteLine("Enter to quit");
+
+                choice = Console.ReadLine();
+                logger.Info("User choice: {Choice}", choice);
+                 if (choice == "1")
+                 {
+
+                 }
+                 else if (choice =="2")
+                 {
+                     
+                 }
+
+            } while (choice == "1" || choice == "2");
 
             logger.Info("Program ended");
         }
