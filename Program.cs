@@ -14,7 +14,7 @@ namespace TicketSystem21
         {
             logger.Info("Program started");
 
-            string ticketFilePath = Directory.GetCurrentDirectory() + "tickets.csv";
+            string ticketFilePath = Directory.GetCurrentDirectory() + "\\tickets.csv";
             TicketFile ticketFile = new TicketFile(ticketFilePath);
             string choice = "";
 
@@ -60,8 +60,8 @@ namespace TicketSystem21
                  }
                  else if (choice =="2")
                  {
-                     foreach(Ticket m in ticketFile.Tickets)
-                    {Console.WriteLine(m.Display());}
+                     foreach(Ticket t in ticketFile.Tickets)
+                    {Console.WriteLine(t.Display());}
                  }
 
             } while (choice == "1" || choice == "2");
