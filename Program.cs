@@ -26,11 +26,40 @@ namespace TicketSystem21
                 logger.Info("User choice: {Choice}", choice);
                  if (choice == "1")
                  {
+                     Ticket ticket = new Ticket();
+                    Console.WriteLine("Enter a summary -");
+                    ticket.summary = Console.ReadLine();
 
+                    Console.WriteLine("Enter a priority level -");
+                    ticket.priority = Console.ReadLine();
+
+                    Console.WriteLine("Enter your name -");
+                    ticket.submitter = Console.ReadLine();
+
+                    Console.WriteLine("Enter who this is assigned to -");
+                    ticket.assigned = Console.ReadLine();
+
+                    String input;
+                    do
+                    {
+                        Console.WriteLine("Enter a watcher (or done to quit)");
+                        input = Console.ReadLine();
+                        if (input != "done" && input.Length > 0)
+                        {
+                            ticket.watching.Add(input);
+                        }
+                    } while (input != "done");
+
+                    if (ticket.watching.Count == 0)
+                    {
+                        ticket.watching.Add("(no one watching)");
+                    }
+                    ticketFile.AddTicket(ticket);
                  }
                  else if (choice =="2")
                  {
-                     
+                     foreach(Ticket m in ticketFile.Tickets)
+                    {Console.WriteLine(m.Display());}
                  }
 
             } while (choice == "1" || choice == "2");
