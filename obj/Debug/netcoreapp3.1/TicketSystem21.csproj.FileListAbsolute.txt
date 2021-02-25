@@ -1,0 +1,11 @@
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\TicketSystem21.exe
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\TicketSystem21.deps.json
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\TicketSystem21.runtimeconfig.json
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\TicketSystem21.runtimeconfig.dev.json
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\TicketSystem21.dll
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\TicketSystem21.pdb
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.csprojAssemblyReference.cache
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.AssemblyInfoInputs.cache
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.AssemblyInfo.cs
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.dll
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.pdb
