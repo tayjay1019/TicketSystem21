@@ -14,6 +14,8 @@ namespace TicketSystem21
         {
             logger.Info("Program started");
 
+            string ticketFilePath = Directory.GetCurrentDirectory() + "\\tickets.csv";
+            TicketFile ticketFile = new TicketFile(ticketFilePath);
             string choice = "";
 
             do

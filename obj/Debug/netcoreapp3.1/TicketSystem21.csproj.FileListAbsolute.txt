@@ -9,3 +9,7 @@ C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSyste
 C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.AssemblyInfo.cs
 C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.dll
 C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.pdb
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+C:\Users\tayja\Desktop\dotNet\TicketSystem21\obj\Debug\netcoreapp3.1\TicketSystem21.csproj.CopyComplete
