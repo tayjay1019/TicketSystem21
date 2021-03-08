@@ -9,7 +9,7 @@ namespace TicketSystem21 {
 
         public override string Display()
         {
-            return $"Id: {ticketId}\nSummary: {summary}\nStatus: {status}\nPriority: {priority}\nSubmiter: {submitter}\nWatching: {string.Join(", ", watching)}\nSeverity: {severity}";
+            return $"Id: {ticketId}\nSummary: {summary}\nStatus: {status}\nPriority: {priority}\nSubmiter: {submitter}\nWatching: {string.Join(", ", watching)}\nSeverity: {severity}\n";
 
         }
     }
