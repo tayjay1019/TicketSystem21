@@ -18,7 +18,7 @@ namespace TicketSystem21
             watching = new List<string>();
         }
 
-        public string Display()
+        public virtual string Display()
         {
             return $"Id: {ticketId}\nSummary: {summary}\nStatus: {status}\nPriority: {priority}\nSubmiter: {submitter}\nWatching: {string.Join(", ", watching)}\n";
         }
