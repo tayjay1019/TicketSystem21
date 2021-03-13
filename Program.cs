@@ -156,7 +156,69 @@ namespace TicketSystem21
                 }
                 else if (choice == "3")
                 {
+                    do
+                    {
+                        Console.WriteLine("Enhancement Tickets");
+                        Console.WriteLine("1) Add Enhancement Ticket");
+                        Console.WriteLine("2) Display all Enhancement Tickets");
+                        Console.WriteLine("Type 'done' to exit");
 
+                        secondChoice = Console.ReadLine();
+                        logger.Info("User second choice: {SecondChoice}", secondChoice);
+
+                        if (secondChoice == "1")
+                        {
+                            EnhancementTicket eTicket = new EnhancementTicket();
+                            Console.WriteLine("Enter a summary -");
+                            eTicket.summary = Console.ReadLine();
+
+                            Console.WriteLine("Enter a priority level -");
+                            eTicket.priority = Console.ReadLine();
+
+                            Console.WriteLine("Enter your name -");
+                            eTicket.submitter = Console.ReadLine();
+
+                            Console.WriteLine("Enter who this is assigned to -");
+                            eTicket.assigned = Console.ReadLine();
+
+                             String input;
+                             do
+                            {
+                                Console.WriteLine("Enter a watcher (or 'done' to quit)");
+                                input = Console.ReadLine();
+                                if (input != "done" && input.Length > 0)
+                                {
+                                    eTicket.watching.Add(input);
+                                 }
+                             } while (input != "done");
+
+                             if (eTicket.watching.Count == 0)
+                            {
+                                eTicket.watching.Add("(no one watching)");
+                            }
+
+                             Console.WriteLine("Enter the software -");
+                             eTicket.software = Console.ReadLine();
+
+                             Console.WriteLine("Enter Cost -");
+                             eTicket.cost = UInt64.Parse(Console.ReadLine());
+
+                             Console.WriteLine("Enter Reason for Enhancement -");
+                             eTicket.reason = Console.ReadLine();
+
+                             Console.WriteLine("Enter Estimate -");
+                             eTicket.estimate = UInt64.Parse(Console.ReadLine());
+
+                             eTicketFile.AddTicket(eTicket);
+
+                        }
+                        else if (secondChoice == "2")
+                        {
+                            foreach(EnhancementTicket t in eTicketFile.ETickets)
+                            {Console.WriteLine(t.Display());}
+                        }
+
+                    } while (secondChoice == "1" || secondChoice == "2");
                 }
 
             }while (choice == "1" || choice == "2" || choice == "3");
