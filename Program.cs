@@ -40,7 +40,7 @@ namespace TicketSystem21
                 {
                     do
                     {
-                        Console.WriteLine("Bug Tickets\n");
+                        Console.WriteLine("Bug Tickets");
                         Console.WriteLine("1) Add Bug Ticket");
                         Console.WriteLine("2) Display all Bug Tickets");
                         Console.WriteLine("Type 'done' to exit");
@@ -85,7 +85,7 @@ namespace TicketSystem21
                              bugTicketFile.AddTicket(bugTicket);
 
                         }
-                        else if (secondChoice == "2");
+                        else if (secondChoice == "2")
                         {
                             foreach(BugTicket t in bugTicketFile.BugTickets)
                             {Console.WriteLine(t.Display());}
@@ -96,7 +96,63 @@ namespace TicketSystem21
                 }
                 else if (choice == "2")
                 {
+                    do
+                    {
+                        Console.WriteLine("Task Tickets");
+                        Console.WriteLine("1) Add Task Ticket");
+                        Console.WriteLine("2) Display all Task Tickets");
+                        Console.WriteLine("Type 'done' to exit");
 
+                        secondChoice = Console.ReadLine();
+                        logger.Info("User second choice: {SecondChoice}", secondChoice);
+
+                        if (secondChoice == "1")
+                        {
+                            TaskTicket taskTicket = new TaskTicket();
+                            Console.WriteLine("Enter a summary -");
+                            taskTicket.summary = Console.ReadLine();
+
+                            Console.WriteLine("Enter a priority level -");
+                            taskTicket.priority = Console.ReadLine();
+
+                            Console.WriteLine("Enter your name -");
+                            taskTicket.submitter = Console.ReadLine();
+
+                            Console.WriteLine("Enter who this is assigned to -");
+                            taskTicket.assigned = Console.ReadLine();
+
+                             String input;
+                             do
+                            {
+                                Console.WriteLine("Enter a watcher (or 'done' to quit)");
+                                input = Console.ReadLine();
+                                if (input != "done" && input.Length > 0)
+                                {
+                                    taskTicket.watching.Add(input);
+                                 }
+                             } while (input != "done");
+
+                             if (taskTicket.watching.Count == 0)
+                            {
+                                taskTicket.watching.Add("(no one watching)");
+                            }
+
+                             Console.WriteLine("Enter Project Name -");
+                             taskTicket.projectName = Console.ReadLine();
+
+                             Console.WriteLine("Enter Due Date -");
+                             taskTicket.dueDate = DateTime.Parse(Console.ReadLine());
+
+                             taskTicketFile.AddTicket(taskTicket);
+
+                        }
+                        else if (secondChoice == "2")
+                        {
+                            foreach(TaskTicket t in taskTicketFile.TaskTickets)
+                            {Console.WriteLine(t.Display());}
+                        }
+
+                    } while (secondChoice == "1" || secondChoice == "2");
                 }
                 else if (choice == "3")
                 {
