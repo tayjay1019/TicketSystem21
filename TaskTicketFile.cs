@@ -51,7 +51,13 @@ namespace TicketSystem21
 
         public void AddTicket(TaskTicket ticket)
         {
-            try{
+            //try{
+                if (TaskTickets.Count == 0){
+                    ticket.ticketId = 1;
+                }else {
+
+                    ticket.ticketId = TaskTickets.Max(m => m.ticketId) +1;
+                }
                 ticket.ticketId = TaskTickets.Max(m => m.ticketId) +1;
                 StreamWriter sw = new StreamWriter(filePath, true);
                 // TODO add the data into the list
@@ -59,11 +65,11 @@ namespace TicketSystem21
                 sw.Close();
                 TaskTickets.Add(ticket);
                 logger.Info("Ticket id {Id} added", ticket.ticketId);
-            }
-            catch(Exception ex)
-            {
-                logger.Error(ex.Message);
-            }
+            //}
+            //catch(Exception ex)
+            //{
+                //logger.Error(ex.Message);
+            //}
         }
 
     }

@@ -367,11 +367,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tayja\\Desktop\\dotNet\\TicketSystem21\\TicketSystem21\\TicketSystem21.csproj",
+      "projectUniqueName": "C:\\Users\\tayja\\Desktop\\dotNet\\TicketSystem21-1\\TicketSystem21.csproj",
       "projectName": "TicketSystem21",
-      "projectPath": "C:\\Users\\tayja\\Desktop\\dotNet\\TicketSystem21\\TicketSystem21\\TicketSystem21.csproj",
+      "projectPath": "C:\\Users\\tayja\\Desktop\\dotNet\\TicketSystem21-1\\TicketSystem21.csproj",
       "packagesPath": "C:\\Users\\tayja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tayja\\Desktop\\dotNet\\TicketSystem21\\TicketSystem21\\obj\\",
+      "outputPath": "C:\\Users\\tayja\\Desktop\\dotNet\\TicketSystem21-1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tayja\\AppData\\Roaming\\NuGet\\NuGet.Config",

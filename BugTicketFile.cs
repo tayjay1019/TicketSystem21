@@ -50,19 +50,25 @@ namespace TicketSystem21
 
         public void AddTicket(BugTicket ticket)
         {
-            try{
-                ticket.ticketId = BugTickets.Max(m => m.ticketId) +1;
+            //try{
+                if (BugTickets.Count == 0){
+                    ticket.ticketId = 1;
+                }else {
+
+                    ticket.ticketId = BugTickets.Max(m => m.ticketId) +1;
+                }
                 StreamWriter sw = new StreamWriter(filePath, true);
                 // TODO add the data into the list
                 sw.WriteLine($"{ticket.ticketId},{ticket.summary},{ticket.status},{ticket.priority},{ticket.submitter},{ticket.assigned},{string.Join("|", ticket.watching)},{ticket.severity}");
                 sw.Close();
                 BugTickets.Add(ticket);
                 logger.Info("Ticket id {Id} added", ticket.ticketId);
-            }
-            catch(Exception ex)
-            {
-                logger.Error(ex.Message);
-            }
+
+            //}
+            //catch(Exception ex)
+            //{
+                //logger.Error(ex.Message);
+            //}
         }
 
     }

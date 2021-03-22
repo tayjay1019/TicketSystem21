@@ -52,7 +52,13 @@ namespace TicketSystem21
 
         public void AddTicket(EnhancementTicket ticket)
         {
-            try{
+            //try{
+                if (ETickets.Count == 0){
+                    ticket.ticketId = 1;
+                }else {
+
+                    ticket.ticketId = ETickets.Max(m => m.ticketId) +1;
+                }
                 ticket.ticketId = ETickets.Max(m => m.ticketId) +1;
                 StreamWriter sw = new StreamWriter(filePath, true);
                 // TODO add the data into the list
@@ -60,11 +66,11 @@ namespace TicketSystem21
                 sw.Close();
                 ETickets.Add(ticket);
                 logger.Info("Ticket id {Id} added", ticket.ticketId);
-            }
-            catch(Exception ex)
-            {
-                logger.Error(ex.Message);
-            }
+           //}
+            //catch(Exception ex)
+            //{
+                //logger.Error(ex.Message);
+            //}
         }
 
 
