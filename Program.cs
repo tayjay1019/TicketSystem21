@@ -2,6 +2,7 @@
 using NLog.Web;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TicketSystem21
 {
@@ -24,6 +25,7 @@ namespace TicketSystem21
             EnhancementTicketFile eTicketFile = new EnhancementTicketFile(eTicketFilePath);
             string choice = "";
             string secondChoice = "";
+            string search = "";
 
 
             do
@@ -32,6 +34,7 @@ namespace TicketSystem21
                 Console.WriteLine("1) Bug Tickets");
                 Console.WriteLine("2) Task Tickets");
                 Console.WriteLine("3) Enhancement Tickets");
+                Conseole.WriteLIne("4) Search Tickets")
 
                 choice = Console.ReadLine();
                 logger.Info("User choice: {Choice}", choice);
@@ -219,9 +222,26 @@ namespace TicketSystem21
                         }
 
                     } while (secondChoice == "1" || secondChoice == "2");
+                } else if (choice = "4")
+                {
+                    do
+                    {
+                        Console.WriteLIne("Refine your search");
+                        Console.WriteLIne("1) By Status");
+                        Console.WriteLIne("2) By Priority");
+                        Console.WriteLIne("3) By Submitter");
+
+                        secondChoice = Console.ReadLine();
+
+                        if (secondChoice = "1")
+                        {
+
+                        }
+
+                    } while (secondChoice == "1" || secondChoice == "2" || secondChoice == "3")
                 }
 
-            }while (choice == "1" || choice == "2" || choice == "3");
+            }while (choice == "1" || choice == "2" || choice == "3" || choice == "4");
 
             /* do
             {
