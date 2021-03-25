@@ -235,7 +235,45 @@ namespace TicketSystem21
 
                         if (secondChoice = "1")
                         {
+                            Console.WriteLIne("Enter status")
+                            search = Console.ReadLine();
 
+                            var statusSearch = BugTicketFile.bugTicket.Where(m => m.status.Contains(search).Select(m => m.status)).Concat(EnhancementTicketFile.eTicket.Where(m => m.status.Contains(search).Select(m => m.status))).Concat(TaskTicketFile.taskTicket.Where(m => m.status.Contains(search).Select(m => m.status)));
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLIne($"There are {statusSearch.Count()} tickets that are {search}")
+                            foreach(string s in statusSearch)
+                            {
+                                Console.WriteLIne($"   {s}");
+                            }
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                        else if (secondChoice = "2")
+                        {
+                            Console.WriteLIne("Enter Priority")
+                            search = Console.ReadLine();
+
+                            var pSearch = BugTicketFile.bugTicket.Where(m => m.priority.Contains(search).Select(m => m.priority)).Concat(EnhancementTicketFile.eTicket.Where(m => m.priority.Contains(search).Select(m => m.priority))).Concat(TaskTicketFile.taskTicket.Where(m => m.priority.Contains(search).Select(m => m.priority)));
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLIne($"There are {pSearch.Count()} tickets that are {search} priority")
+                            foreach(string p in pSearch)
+                            {
+                                Console.WriteLIne($"   {p}");
+                            }
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                        else if (secondChoice = "3")
+                        {
+                            Console.WriteLIne("Enter submitter")
+                            search = Console.ReadLine();
+
+                            var submitSearch = BugTicketFile.bugTicket.Where(m => m.submitter.Contains(search).Select(m => m.submitter)).Concat(EnhancementTicketFile.eTicket.Where(m => m.submitter.Contains(search).Select(m => m.submitter))).Concat(TaskTicketFile.taskTicket.Where(m => m.submitter.Contains(search).Select(m => m.submitter)));
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLIne($"There are {submitSearch.Count()} tickets submitter by {search}")
+                            foreach(string s in submitSearch)
+                            {
+                                Console.WriteLIne($"   {s}");
+                            }
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
 
                     } while (secondChoice == "1" || secondChoice == "2" || secondChoice == "3")
